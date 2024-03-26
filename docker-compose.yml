@@ -1,3 +1,4 @@
+version: '3.9'
 services:
 
   # REVERSE PROXY
@@ -24,8 +25,8 @@ services:
       service: quarkus
     build:
       context: ./election-management
-      # dockerfile: src/main/docker/Dockerfile.native
-      dockerfile: src/main/docker/Dockerfile.jvm
+      dockerfile: src/main/docker/Dockerfile.native
+      # dockerfile: src/main/docker/Dockerfile.jvm
     image: dio/election-management:${TAG:-1.0.0}
     labels:
       - traefik.http.routers.election-management.rule=Host(`vote.dio.localhost`) && PathPrefix(`/api`)
