@@ -81,7 +81,6 @@
         <configuration>
           <compilerArgs>
             <arg>-parameters</arg>
-            <release>17</release>
           </compilerArgs>
         </configuration>
       </plugin>
