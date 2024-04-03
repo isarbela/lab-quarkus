@@ -15,7 +15,6 @@ public class CandidateApi {
         this.service = service;
     }
 
-
     public void create(api.dto.in.CreateCandidate dto) {
         service.save(dto.toDomain());
     }
