@@ -48,8 +48,8 @@ public class RedisElectionRepository implements ElectionRepository {
     }
 
     @Override
-    public void vote(String id, Candidate candidate) {
+    public void vote(String electionId, Candidate candidate) {
         LOGGER.info("Voting for " + candidate.id());
-        sortedSetCommands.zincrby(KEY + id, 1, candidate.id());
+        sortedSetCommands.zincrby(KEY + electionId, 1, candidate.id());
     }
 }
