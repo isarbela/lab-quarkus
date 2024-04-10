@@ -1,6 +1,5 @@
 package infrastructure.lifecycle;
 
-
 import infrastructure.repositories.RedisElectionRepository;
 import io.quarkus.runtime.Startup;
 import jakarta.enterprise.context.ApplicationScoped;
